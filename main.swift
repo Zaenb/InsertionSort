@@ -18,7 +18,8 @@ func insertionSort(unsortedIntegers: [Int]) -> [Int] {
                                                                                                                                                                                 
                                                                                                                                                                                   
                                                                                                                                                                                  
-      for i in 1..<array.count {                                                                                                                                                         swapCountPerPass = 0                                                                                                                                                    
+      for i in 1..<array.count {                                                                                                                                                        
+          swapCountPerPass = 0                                                                                                                                                    
        let key = array[i]                                                                                                                                                      
          var j = i - 1                                                                                                                                                           
            while j>=0 && array[j] > key{                                                                                                                                           
@@ -28,4 +29,12 @@ func insertionSort(unsortedIntegers: [Int]) -> [Int] {
              swapCountPerPass += 1                                                                                                                                               
         }                                                                                                                                                                       
          array[j+1] = key                                                                                                                                                        
-          passCount += 1                                     
+          passCount += 1      
+             print("Pass: \(passCount), Swaps: \(swapCountPerPass)/\(totalSwap),", terminator: " ")                                                                                  
+          print("Array: \(array)")                                                                                                                                                
+      }                                                                                                                                                                           
+      return array                                                                                                                                                                
+   }                                                                                                                                                                               
+   let SortedIntegers = insertionSort(unsortedIntegers: unsortedIntegers)                                                                                                          
+   //print("(sortedIntegers)")                                                                                                                                                     
+                                         
